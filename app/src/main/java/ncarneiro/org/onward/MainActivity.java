@@ -4,11 +4,13 @@ import ncarneiro.org.onward.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.res.AssetManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -44,6 +46,11 @@ public class MainActivity extends Activity {
      * The instance of the {@link SystemUiHider} for this activity.
      */
     private SystemUiHider mSystemUiHider;
+
+    private AssetManager assets;
+    private GameView gameview;
+    private int gamewidth = 900;
+    private int gameheight = 500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,11 +124,14 @@ public class MainActivity extends Activity {
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-
         // Trigger the initial hide() shortly after the activity has been
         // created, to briefly hint to the user that UI controls
         // are available.
         delayedHide(100);
+        //////////////////////////
+        //TODO: write my own code
+
+        //TODO: finish writing my own code
     }
 
 

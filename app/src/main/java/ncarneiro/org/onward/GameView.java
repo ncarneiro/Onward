@@ -1,6 +1,9 @@
 package ncarneiro.org.onward;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.view.SurfaceView;
 
 /**
@@ -12,8 +15,10 @@ public class GameView extends SurfaceView {
         super(context);
     }
 
-    public GameView(Context context, int width, int height) {
-        super(context);
+    public void paint(Bitmap bitmap) {
+        Canvas canvas = getHolder().lockCanvas();
+        canvas.drawBitmap(bitmap, 0, 0, null);
+        getHolder().unlockCanvasAndPost(canvas);
     }
 
 }
