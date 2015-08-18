@@ -18,6 +18,11 @@ public class GameLoopThread extends Thread {
             getInput();
             updateLogic();
             updateGraphics();
+            try {
+                Thread.sleep(15);//give some time for cpu do some other stuff
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 }
